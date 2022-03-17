@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="mt-3">
+		<p class="bg-warning text-dark" style="padding:10px;">File: {{csv.csv}}</p>
+		<p>Results</p>
+		<div class="bg-warning text-dark" style="padding:10px;">
+			{{result}}
+		</div>
+		<div class="mt-3 bg-warning text-dark" style="padding:10px;">
+			<p>TOTAL ITEMS: <b><i>{{ total_item}}</i></b></p>
+			<p>GIVEN MIN-SUPPORT: <b><i>{{ csv.min_support }}</i></b></p>
+			<p>APRIORI ALGORITHM RUN-TIME:<b><i>{{  program_run_time }} hrs:mins:sec.ms </i></b></p>
+		</div>
+		<p class="mt-3">Sorted results</p>
+	</div>
+{% endblock content %}

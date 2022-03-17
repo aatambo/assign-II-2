@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="card mt-3">
+		<form method="post" enctype="multipart/form-data" class="card-body">
+			<h5 class="card-title">Upload a csv file</h5><br>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button class="btn btn-sm btn-outline-secondary mt-2 mb-2" type="submit">Submit</button>
+		</form>
+	</div>
+{% endblock content %}

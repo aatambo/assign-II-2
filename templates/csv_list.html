@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="row">
+		{% for csv in csvs  %}
+			<div class="col-md-6">
+				<div class="card bg-warning text-dark mt-3">
+					<div class="card-body">
+						<h5 class="card-title text-danger">{{ csv.csv.name|upper }}</h5>
+						<p class="card-text">min_sup:{{csv.min_support}}</p>
+						<a class="btn btn-sm btn-outline-dark" href="{% url 'csv-detail' csv.pk %}">More</a>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock content %}
